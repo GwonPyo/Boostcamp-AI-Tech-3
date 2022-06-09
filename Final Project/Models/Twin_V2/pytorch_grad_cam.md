@@ -8,7 +8,7 @@ pip install grad-cam
 
 먼저 학습한 모델을 불러온다.
 
-```
+```python
 model = timm.create_model('swinv2_large_window12to24_192to384_22kft1k', pretrained=True).to(device)
 in_features = model.head.in_features
 model.head = nn.Sequential(
@@ -21,7 +21,7 @@ model.eval()
 그리고 valid 이미지가 존재하는 파일에 접근해 이미지 파일들을 가져온다. 
 valid_path 부분은 알맞게 변경해야 한다.
 
-```
+```python
 valid_path = 'dataset/valid/JPEGImages'
 file_list = os.listdir(valid_path)
 image_list = []
@@ -32,7 +32,7 @@ for file in file_list:
 ```
 
 마지막으로 아래 코드를 실행시켜주면 된다.
-```
+```python
 from pytorch_grad_cam import GradCAM, ScoreCAM, GradCAMPlusPlus, AblationCAM, XGradCAM, EigenCAM, FullGrad
 from pytorch_grad_cam.utils.model_targets import ClassifierOutputTarget
 from pytorch_grad_cam.utils.image import show_cam_on_image, preprocess_image
