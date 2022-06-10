@@ -10,9 +10,9 @@
 - Image Size : 1024x1024
 
 ### 🏆Result
-If you want the result of several experiments check Object Detection Folder.
+If you want the result of several experiments I conducted check Object Detection Folder.
 
-If you have more curiosity of this Competition, check Object Detection Folder. <br>
+If you have more curiosity of this Competition and what my team conducted, click on the link below. <br>
 Team Repository Link: https://github.com/boostcampaitech3/level2-object-detection-level2-cv-18
 
 <h3> <strong> [AI Stage 2] Data Production </strong> </h3>
