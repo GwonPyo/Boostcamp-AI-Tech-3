@@ -18,7 +18,7 @@ If you want to use yolo-v5 public repo, you can refer to my folder(Yolo_V5_Manua
 
 I want to use **Label Smoothing(LS)** for improving model's generalization. But Public_mAP and Private_mAP are reduced slightly. My Team think there is still room for experimentation. So I take experiments of yolo-v5 applied label smoothing and other team member conduct experiments of yolo-v5 not applied label smoothing. Then I use **Hyperparameter Tuning(HT)** which is called Hyperparameter Evolution and Test **Time Augmentation(TTA)** and I can check both methods increase model performance.
 
-## Test 2. Multi-scale & low-hyp.yaml
+## Test 2. Multi-scale
 
 | Model | Public_mAP | Private_mAP |
 | :---: | :---: | :---: |
@@ -26,18 +26,18 @@ I want to use **Label Smoothing(LS)** for improving model's generalization. But 
 | Multi Scale (LS + HT) | 0.4410 | 0.4195 |
 | Multi Scale (LS + HT + TTA) | 0.4938 | 0.4758 |
 
-I apply Multi Scale to yolo-v5. The performence of model which is not applied Label Smoothing is increased but the other is decreased. TTA method increases model performance as before. 
+I apply **Multi Scale** to yolo-v5. The performence of model which is not applied Label Smoothing is increased but the other is decreased. TTA method increases model performance as before. 
 
 ## Test 3. Pseudo Labeling
 | Model | Public_mAP | Private_mAP |
 | :---: | :---: | :---: |
 | Pseudo Labeling (LS + HT) | 0.5171 | 0.4954 |
 
-I use Pseudo Labeling(PL) and this method have a positive effect on model. 
+I use **Pseudo Labeling(PL)** and this method have a positive effect on model. 
 
 ## Test 4. Augmentation
 
-I use Augmentation Methods like below.
+I use **Augmentation Methods** like below.
 
 ```python
 self.transform = A.Compose([
@@ -66,7 +66,7 @@ Augmentations improve model's generalization. But this time Pseudo Labeling(PL) 
 
 ## Test 5. Yolov5x6
 
-When I train models before, I used Yolov5x model. This model has faster training/inference time than more complicated models but lower mAP performance than those. So I change model bigger than Yolov5x. I apply Label Smoothing, Hyperparameter Tuning, TTA, Pseudo Labeling to this model.
+When I train models before, I used **Yolov5x** model. This model has faster training/inference time than more complicated models but lower mAP performance than those. So I change model bigger than Yolov5x. I apply Label Smoothing, Hyperparameter Tuning, TTA, Pseudo Labeling to this model.
 
 | Model | Public_mAP | Private_mAP |
 | :---: | :---: | :---: |
@@ -74,7 +74,7 @@ When I train models before, I used Yolov5x model. This model has faster training
 
 ## Test 6. Offline Augmentation
 
-The Dataset has imbalance. So we use Offline Augmentation to solve this problem. We apply augmentations and make datas which is included insufficient class.
+The Dataset has imbalance. So we use **Offline Augmentation** to solve this problem. We apply augmentations and make datas which is included insufficient class.
 
 | Model | Public_mAP | Private_mAP |
 | :---: | :---: | :---: |
