@@ -2,6 +2,8 @@
 
 ## <h3> <strong> [AI Stage 1] Object Detection </strong> </h3>
 
+### 🔥Competition
+This competition's goal is detecting trashes in images and classifying those into 10 classes.  
 
 ### 🗂️Dataset
 - Train Images : 4883 images
